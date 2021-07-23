@@ -1,7 +1,7 @@
 resource "null_resource" "assign_role" {
   triggers = {
     principal_id = var.principal_id
-    role_definition_id
+    role_definition_id = var.role_definition_id
   }
   provisioner "local-exec" {
     command = templatefile("${path.module}/assign_role.bash", {
