@@ -8,7 +8,7 @@ variable "role_definition_id" {
   type = string
 }
 
-variable "tentant_id" {
+variable "tenant_id" {
   description = "The Azure Tenant Id."
   type = string
 }
