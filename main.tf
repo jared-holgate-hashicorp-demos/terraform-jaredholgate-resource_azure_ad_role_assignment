@@ -7,7 +7,7 @@ resource "null_resource" "assign_role" {
     command = templatefile("${path.module}/assign_role.bash", {
       tenant_id          = var.tenant_id
       client_id          = var.client_id
-      client_secret      = replace(replace(var.client_secret, "\\", "\\\\"), "'", "\\'")
+      client_secret      = replace(var.client_secret, "'", "'\\''")
       msi_principal_id   = var.principal_id
       role_definition_id = var.role_definition_id
     })
