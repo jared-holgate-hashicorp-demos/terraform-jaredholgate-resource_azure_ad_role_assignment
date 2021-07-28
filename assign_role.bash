@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "${BASH_VERSION}"
+bash --version
 
 CLIENT_ID='${client_id}'
 CLIENT_SECRET='${client_secret}'
