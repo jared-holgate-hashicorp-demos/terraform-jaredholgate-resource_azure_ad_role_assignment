@@ -1,7 +1,7 @@
 #!/bin/bash
 
 CLIENT_ID='${client_id}'
-CLIENT_SECRET=$'${client_secret}'
+CLIENT_SECRET='${client_secret}'
 TENANT_ID='${tenant_id}'
 MSI_PRINCIPAL_ID='${msi_principal_id}'
 ROLE_DEFINITION_ID='${role_definition_id}'
