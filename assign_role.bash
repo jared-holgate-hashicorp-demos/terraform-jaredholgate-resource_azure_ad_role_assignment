@@ -6,6 +6,8 @@ TENANT_ID='${tenant_id}'
 MSI_PRINCIPAL_ID='${msi_principal_id}'
 ROLE_DEFINITION_ID='${role_definition_id}'
 
+echo $CLIENT_SECRET
+
 ACCESS_TOKEN=$(curl -X POST -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET&resource=https%3A%2F%2Fgraph.microsoft.com%2F" "https://login.microsoftonline.com/$TENANT_ID/oauth2/token" | jq -r '.access_token')
 
 echo $ACCESS_TOKEN
